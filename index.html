@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./style.css">
+    <title>Ping Pong 2P</title>
+</head>
+<body>
+    <input type="range" min="0" max="300" name="" id="player1">
+    <canvas width="400" height="400"></canvas>
+    <input type="range" name="" min="0" max="300" id="player2">
+    <div class="menu" min="0" max="300" id="menu">
+        <button style="position: absolute; right: -10px; top: -10px;">x</button>
+        <div><h1>Theme</h1>
+            <button  id="theme_normal">normal</button>
+            <button  id="theme_dark">dark</button>
+            <button  id="theme_funky">funky</button>
+        </div>
+
+        <h1>Sounds</h1>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; border:2px solid black; padding:1rem; height: 100px;">
+            <div>
+                <h2>bounce <input type="radio" data-set="0"> </h2>
+            </div>
+            <div>
+                <h2>score <input type="radio" data-set="1"> </h2>
+            </div>
+            <div>
+                <h2>count<input type="radio" data-set="2"> </h2>
+            </div>
+            <div>
+                <h2>music<input type="radio" data-set="3"> </h2>
+            </div>
+        </div>
+    </div>
+    <script src="./utils.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>

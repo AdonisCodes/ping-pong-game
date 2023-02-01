@@ -1,0 +1,59 @@
+* {
+    padding: 0 0;
+    margin: 0 0 ;
+}
+
+body {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    background-color: #36393f;
+    vertical-align: middle;
+    align-content: center;
+    overflow-x: hidden;
+}
+
+canvas {
+    background: rgb(54,57,63);
+    background: linear-gradient(90deg, rgba(70,57,63,1) 35%, rgba(6,67,66,1) 100%);
+    min-height: 40vh;
+    max-height: 50vh;
+    aspect-ratio: 1/1;
+    height: 50vh;
+
+
+  
+}
+
+.menu {
+    padding: 2rem;
+    border:10px solid black;
+    position: fixed;
+    z-index: 2;
+    height: max-content;
+    visibility:hidden;
+    aspect-ratio: 1 / 1;
+    height: 40vh;
+}
+
+h1 {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+button {
+    color: inherit;
+    font-size: inherit;
+    font: inherit;
+    font-weight: bold;
+    padding: 1rem;
+    border: 5px solid black;
+    width: 12.5vh;
+    text-align: center;
+    background-color: #36393f;
+}
+
+input {
+    transform: rotate(90deg);
+}
