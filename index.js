@@ -7,7 +7,7 @@ let menu = document.getElementById("menu")
 let buttons = document.querySelectorAll("button")
 let playerRange1 = document.getElementById("player1")
 let playerRange2 = document.getElementById("player2")
-
+let startMenu = document.getElementById("start")
 context.font = "50px Arial"
 
 // initialize all the sounds
@@ -98,8 +98,15 @@ let loop = setInterval(() => {
 
 // done
 function game() {
+    // check if the game is in start mode
+    if (state.start) {
+        render()
+        return drawStartMenu()  
+    }
 
-    console.log(state.players[1].pos)
+    if (!(state.start)) {
+        startMenu.visibility = "hidden"
+    }
     // loop the state.actions and do them
     actions()
     if (navigator.userAgent.match(/Android/) || navigator.userAgent.match(/Iphone/) || navigator.userAgent.match(/Blackberry/)) {
@@ -168,7 +175,8 @@ let state = {
     restart: 3100,
     mute: [false, false, false, false],
     theme: "dark",
-    mobile: false
+    mobile: false,
+    start: true
 }
 
 let themes = {
@@ -564,6 +572,17 @@ function drawPauseMenu() {
         e.style.border = `${themes[state.theme][6]} solid 5px`
     }) 
 
+}
+
+// ? draw the start screen
+function drawStartMenu() {
+    startMenu.style.visibility = "visible"
+
+}
+
+// ? set game to not start
+function startGame() {
+    state.start = false
 }
 
 // ? swap theme
