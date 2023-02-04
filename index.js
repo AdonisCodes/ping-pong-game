@@ -29,7 +29,7 @@ function playPing() {
 
 function playCountDown() {
     if (!(state.mute[2])) {
-        // countDown.play()
+        countDown.play()
     }
 
 }
