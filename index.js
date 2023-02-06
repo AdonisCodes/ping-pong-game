@@ -98,16 +98,6 @@ let loop = setInterval(() => {
 
 // done
 function game() {
-    // check if the game is in start mode
-    if (state.start) {
-        render()
-        return drawStartMenu()  
-    }
-
-    if (!(state.start)) {
-        startMenu.visibility = "hidden"
-    }
-    // loop the state.actions and do them
     actions()
     if (navigator.userAgent.match(/Android/) || navigator.userAgent.match(/Iphone/) || navigator.userAgent.match(/Blackberry/)) {
         state.mobile = true
